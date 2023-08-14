@@ -43,3 +43,20 @@ class Book {
     this.author = author;
   }
 }
+
+class UI {
+    addBook(book) {
+      const title = document.getElementById('book');
+      this.title = title;
+      const list = document.getElementById('book-list');
+      const flex = document.createElement('div');
+      flex.classList.add('lists');
+      flex.innerHTML = `
+  
+      <p><span>"${book.title}"</span> by <span>${book.author}</span></p>
+      <button type="submit" class="submit">Remove</button>
+     
+      `;
+      list.appendChild(flex);
+    }
+    
