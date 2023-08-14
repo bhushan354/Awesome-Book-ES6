@@ -59,4 +59,21 @@ class UI {
       `;
       list.appendChild(flex);
     }
+
+    showAlert(message, className) {
+        const title = document.getElementById('book');
+        this.title = title;
+        const div = document.createElement('div');
+        div.className = `alert ${className} `;
+        div.appendChild(document.createTextNode(message));
     
+        const container = document.querySelector('#newbook');
+        const form = document.querySelector('#book-form');
+    
+        container.insertBefore(div, form);
+    
+        setTimeout(() => {
+          document.querySelector('.alert').remove();
+        }, 2000);
+      }
+
