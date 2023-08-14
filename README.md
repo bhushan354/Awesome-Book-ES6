@@ -106,6 +106,7 @@ If you like this project, pplease, feel free to star the repository and share it
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse team and Code reviewers who helped us with creating this project.
+Also , I would like to thank my coding partner from previous week @zhorabay who helped me for date and time . 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
