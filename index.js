@@ -1,7 +1,6 @@
 import UI from './modules/classUI.js';
 import Book from './modules/classBOOK.js';
 
-
 const librarySection = document.getElementById('library');
 const formSection = document.getElementById('newbook');
 const contactSection = document.getElementById('contact');
@@ -31,7 +30,6 @@ function List() {
   contactSection.style.display = 'none';
 }
 
-
 newBookLink.addEventListener('click', Form);
 contactLink.addEventListener('click', Contact);
 libraryLink.addEventListener('click', List);
@@ -43,11 +41,9 @@ setInterval(() => {
 
 // classBook
 
+// classUI
 
-//classUI
-
-
-    document.getElementById('book-form').addEventListener('submit',
+document.getElementById('book-form').addEventListener('submit',
   (e) => {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
@@ -68,14 +64,13 @@ setInterval(() => {
     e.preventDefault();
   });
 
-  
 document.getElementById('book-list').addEventListener('click',
-(e) => {
-  const ui = new UI();
+  (e) => {
+    const ui = new UI();
 
-  ui.deleteBook(e.target);
+    ui.deleteBook(e.target);
 
-  ui.showAlert('Book Removed', 'success');
+    ui.showAlert('Book Removed', 'success');
 
-  e.preventDefault();
-});
+    e.preventDefault();
+  });
