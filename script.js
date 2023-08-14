@@ -84,3 +84,11 @@ class UI {
           target.parentElement.remove();
         }
       }
+
+      clearFields() {
+        const title = document.getElementById('book');
+        this.title = title;
+        document.getElementById('title').value = '';
+        document.getElementById('author').value = '';
+      }
+    }
