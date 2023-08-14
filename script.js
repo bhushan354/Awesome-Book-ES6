@@ -26,3 +26,20 @@ function List() {
   formSection.style.display = 'none';
   contactSection.style.display = 'none';
 }
+
+
+newBookLink.addEventListener('click', Form);
+contactLink.addEventListener('click', Contact);
+libraryLink.addEventListener('click', List);
+
+setInterval(() => {
+  const date = new Date();
+  time.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
