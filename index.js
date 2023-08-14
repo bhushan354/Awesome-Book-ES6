@@ -1,4 +1,5 @@
 import UI from './modules/classUI.js';
+import Book from './modules/classBOOK.js';
 
 
 const librarySection = document.getElementById('library');
