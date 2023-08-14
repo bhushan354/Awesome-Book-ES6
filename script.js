@@ -77,3 +77,10 @@ class UI {
         }, 2000);
       }
 
+      deleteBook(target) {
+        const title = document.getElementById('book');
+        this.title = title;
+        if (target.className === 'submit') {
+          target.parentElement.remove();
+        }
+      }
