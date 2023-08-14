@@ -75,3 +75,20 @@ document.getElementById('book-list').addEventListener('click',
 
     e.preventDefault();
   });
+
+// data and time
+const displayTime = document.querySelector('#time');
+
+const currentTime = DateTime.local();
+const formattedDate = currentTime.toLocaleString({
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+});
+
+setInterval(() => {
+  const formattedTime = currentTime.toLocaleString(DateTime.TIME_WITH_SECONDS);
+  displayTime.innerHTML = `
+    <p>${formattedDate} &nbsp ${formattedTime}</p>
+  `;
+}, 1000);
