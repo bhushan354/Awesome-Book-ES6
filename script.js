@@ -92,7 +92,7 @@ class UI {
         document.getElementById('author').value = '';
       }
     }
-    
+
     document.getElementById('book-form').addEventListener('submit',
   (e) => {
     const title = document.getElementById('title').value;
@@ -113,3 +113,15 @@ class UI {
     }
     e.preventDefault();
   });
+
+  
+document.getElementById('book-list').addEventListener('click',
+(e) => {
+  const ui = new UI();
+
+  ui.deleteBook(e.target);
+
+  ui.showAlert('Book Removed', 'success');
+
+  e.preventDefault();
+});
