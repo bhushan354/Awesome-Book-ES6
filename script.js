@@ -92,3 +92,24 @@ class UI {
         document.getElementById('author').value = '';
       }
     }
+    
+    document.getElementById('book-form').addEventListener('submit',
+  (e) => {
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+
+    const book = new Book(title, author);
+
+    const ui = new UI();
+
+    if (title === '' || author === '') {
+      ui.showAlert('Please fill in all fields', 'error');
+    } else {
+      ui.addBook(book);
+
+      ui.showAlert('Book Added', 'success');
+
+      ui.clearFields();
+    }
+    e.preventDefault();
+  });
