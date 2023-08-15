@@ -13,23 +13,23 @@ const time = document.getElementById('time');
 formSection.style.display = 'none';
 contactSection.style.display = 'none';
 
-function Form() {
+const Form = () => {
   formSection.style.display = 'block';
   contactSection.style.display = 'none';
   librarySection.style.display = 'none';
-}
+};
 
-function Contact() {
+const Contact = () => {
   contactSection.style.display = 'block';
   formSection.style.display = 'none';
   librarySection.style.display = 'none';
-}
+};
 
-function List() {
+const List = () => {
   librarySection.style.display = 'block';
   formSection.style.display = 'none';
   contactSection.style.display = 'none';
-}
+};
 
 newBookLink.addEventListener('click', Form);
 contactLink.addEventListener('click', Contact);
